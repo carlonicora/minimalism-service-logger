@@ -1,8 +1,8 @@
 <?php
 namespace CarloNicora\Minimalism\Services\Logger;
 
-use CarloNicora\Minimalism\Interfaces\Logger\Enums\LogLevel;
-use CarloNicora\Minimalism\Interfaces\Logger\Interfaces\LoggerInterface;
+use CarloNicora\Minimalism\Enums\LogLevel;
+use CarloNicora\Minimalism\Interfaces\LoggerInterface;
 use CarloNicora\Minimalism\Interfaces\ServiceInterface;
 use CarloNicora\Minimalism\Services\Logger\Objects\MinimalismLog;
 use CarloNicora\Minimalism\Services\Path;

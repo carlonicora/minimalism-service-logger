@@ -1,7 +1,7 @@
 <?php
 namespace CarloNicora\Minimalism\Services\Logger\Objects;
 
-use CarloNicora\Minimalism\Interfaces\Logger\Enums\LogLevel;
+use CarloNicora\Minimalism\Enums\LogLevel;
 
 class MinimalismLog
 {
