@@ -10,7 +10,7 @@ use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\Handler;
 use Monolog\Handler\StreamHandler;
 
-class Logger extends AbstractService
+class Logger extends AbstractService implements LoggerInterface
 {
     /** @var array  */
     protected array $extra=[];
