@@ -1,16 +1,16 @@
 <?php
 namespace CarloNicora\Minimalism\Services\Logger;
 
+use CarloNicora\Minimalism\Abstracts\AbstractService;
 use CarloNicora\Minimalism\Enums\LogLevel;
 use CarloNicora\Minimalism\Interfaces\LoggerInterface;
-use CarloNicora\Minimalism\Interfaces\ServiceInterface;
 use CarloNicora\Minimalism\Services\Logger\Objects\MinimalismLog;
 use CarloNicora\Minimalism\Services\Path;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\Handler;
 use Monolog\Handler\StreamHandler;
 
-class Logger implements ServiceInterface, LoggerInterface
+class Logger extends AbstractService
 {
     /** @var array  */
     protected array $extra=[];
@@ -31,8 +31,19 @@ class Logger implements ServiceInterface, LoggerInterface
         private int $MINIMALISM_LOG_LEVEL= \Monolog\Logger::WARNING
     )
     {
+        parent::__construct();
+
         $this->handlers[] = [$this, 'getStreamHandler'];
         $this->initialise();
+    }
+
+    /**
+     * @return string|null
+     */
+    public static function getBaseInterface(
+    ): ?string
+    {
+        return LoggerInterface::class;
     }
 
     /**
