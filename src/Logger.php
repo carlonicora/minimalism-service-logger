@@ -336,6 +336,7 @@ class Logger extends AbstractService implements LoggerInterface
     public function destroy(
     ): void
     {
+        parent::destroy();
         $this->flush();
     }
 
