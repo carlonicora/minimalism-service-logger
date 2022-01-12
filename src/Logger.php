@@ -31,8 +31,6 @@ class Logger extends AbstractService implements LoggerInterface
         private int $MINIMALISM_LOG_LEVEL= \Monolog\Logger::WARNING
     )
     {
-        parent::__construct();
-
         $this->handlers[] = [$this, 'getStreamHandler'];
         $this->initialise();
     }
